@@ -20,6 +20,7 @@ class TrainCoordinator: Coordinator {
   
   func start() {
     let vc: DestinationViewController = .initialize()
+    vc.pageName = "Train"
     vc.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
     navigationController.pushViewController(vc, animated: false)
   }

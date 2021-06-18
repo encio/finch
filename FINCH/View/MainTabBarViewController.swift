@@ -13,9 +13,13 @@ class MainTabBarViewController: UITabBarController {
     let trainCoordinator = TrainCoordinator(navigation: UINavigationController())
     override func viewDidLoad() {
       super.viewDidLoad()
+      
       initializeCoordinator()
+      
       viewControllers = [busCoordinator.navigationController, trainCoordinator.navigationController]
-        // Do any additional setup after loading the view.
+      
+      tabBar.barTintColor = .barColor
+      tabBar.tintColor = .barItemColor
     }
     
   
