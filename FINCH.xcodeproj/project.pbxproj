@@ -9,29 +9,31 @@
 /* Begin PBXBuildFile section */
 		42C2F407267D23B30044495F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F406267D23B30044495F /* AppDelegate.swift */; };
 		42C2F409267D23B30044495F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F408267D23B30044495F /* SceneDelegate.swift */; };
-		42C2F40B267D23B30044495F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F40A267D23B30044495F /* ViewController.swift */; };
+		42C2F40B267D23B30044495F /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F40A267D23B30044495F /* DestinationViewController.swift */; };
 		42C2F40E267D23B30044495F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2F40C267D23B30044495F /* Main.storyboard */; };
 		42C2F410267D23B70044495F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C2F40F267D23B70044495F /* Assets.xcassets */; };
 		42C2F413267D23B70044495F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C2F411267D23B70044495F /* LaunchScreen.storyboard */; };
 		42C2F41E267D31AA0044495F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F41D267D31AA0044495F /* Coordinator.swift */; };
 		42C2F422267D34140044495F /* UIViewcontroller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F421267D34140044495F /* UIViewcontroller+Extension.swift */; };
-		42C2F42C267D35EA0044495F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F42B267D35EA0044495F /* MainCoordinator.swift */; };
+		42C2F42C267D35EA0044495F /* BusCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F42B267D35EA0044495F /* BusCoordinator.swift */; };
 		42C2F430267D37670044495F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F42F267D37670044495F /* MainTabBarViewController.swift */; };
+		42C2F435267D3B860044495F /* TrainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F434267D3B860044495F /* TrainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42C2F403267D23B30044495F /* FINCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FINCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C2F406267D23B30044495F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C2F408267D23B30044495F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42C2F40A267D23B30044495F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42C2F40A267D23B30044495F /* DestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		42C2F40D267D23B30044495F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42C2F40F267D23B70044495F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C2F412267D23B70044495F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42C2F414267D23B70044495F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C2F41D267D31AA0044495F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		42C2F421267D34140044495F /* UIViewcontroller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Extension.swift"; sourceTree = "<group>"; };
-		42C2F42B267D35EA0044495F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		42C2F42B267D35EA0044495F /* BusCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusCoordinator.swift; sourceTree = "<group>"; };
 		42C2F42F267D37670044495F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		42C2F434267D3B860044495F /* TrainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				42C2F41D267D31AA0044495F /* Coordinator.swift */,
-				42C2F42B267D35EA0044495F /* MainCoordinator.swift */,
+				42C2F42B267D35EA0044495F /* BusCoordinator.swift */,
+				42C2F434267D3B860044495F /* TrainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -97,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				42C2F40C267D23B30044495F /* Main.storyboard */,
-				42C2F40A267D23B30044495F /* ViewController.swift */,
+				42C2F40A267D23B30044495F /* DestinationViewController.swift */,
 				42C2F42F267D37670044495F /* MainTabBarViewController.swift */,
 			);
 			path = View;
@@ -174,8 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C2F41E267D31AA0044495F /* Coordinator.swift in Sources */,
-				42C2F42C267D35EA0044495F /* MainCoordinator.swift in Sources */,
-				42C2F40B267D23B30044495F /* ViewController.swift in Sources */,
+				42C2F42C267D35EA0044495F /* BusCoordinator.swift in Sources */,
+				42C2F40B267D23B30044495F /* DestinationViewController.swift in Sources */,
+				42C2F435267D3B860044495F /* TrainCoordinator.swift in Sources */,
 				42C2F430267D37670044495F /* MainTabBarViewController.swift in Sources */,
 				42C2F422267D34140044495F /* UIViewcontroller+Extension.swift in Sources */,
 				42C2F407267D23B30044495F /* AppDelegate.swift in Sources */,

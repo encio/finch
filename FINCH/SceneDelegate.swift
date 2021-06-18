@@ -9,7 +9,6 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-  var coordinator: MainCoordinator?
   var window: UIWindow?
 
 
@@ -20,12 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let _ = (scene as? UIWindowScene) else { return }
     
     guard let windowScene = (scene as? UIWindowScene) else { return }
-    let navController = UINavigationController()
-    let coordinator = MainCoordinator(navigation: navController)
-    coordinator.start()
+  
 
     let window = UIWindow(windowScene: windowScene)
-    window.rootViewController = navController
+    window.rootViewController = MainTabBarViewController()
     self.window = window
     window.makeKeyAndVisible()
   }
