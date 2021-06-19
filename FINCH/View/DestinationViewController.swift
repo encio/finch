@@ -79,8 +79,6 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     
     let label = UILabel.init(frame: CGRect.init(x: 20, y: 20, width: tableView.frame.size.width, height: 35))
-    
-    label.backgroundColor = .systemGray6
     label.text = "Finch Station Subway Platform"
     label.font = UIFont.boldSystemFont(ofSize: 25)
     label.numberOfLines = 0

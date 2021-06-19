@@ -20,6 +20,8 @@ final class MainTabBarViewController: UITabBarController {
       
       tabBar.barTintColor = .barColor
       tabBar.tintColor = .barItemColor
+      
+      StationService().get { _ in}
     }
     
   

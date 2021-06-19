@@ -23,6 +23,9 @@
 		42C2F442267D75690044495F /* DestinationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F441267D75690044495F /* DestinationPresenter.swift */; };
 		42C2F445267D803F0044495F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F444267D803F0044495F /* DetailsViewController.swift */; };
 		42C2F448267D83400044495F /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F447267D83400044495F /* DetailsCoordinator.swift */; };
+		42C2F44C267E05160044495F /* DumbGetterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F44B267E05160044495F /* DumbGetterServiceProtocol.swift */; };
+		42C2F44F267E08550044495F /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F44E267E08550044495F /* StationModel.swift */; };
+		42C2F453267E08C20044495F /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F452267E08C20044495F /* StationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		42C2F441267D75690044495F /* DestinationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationPresenter.swift; sourceTree = "<group>"; };
 		42C2F444267D803F0044495F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		42C2F447267D83400044495F /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		42C2F44B267E05160044495F /* DumbGetterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumbGetterServiceProtocol.swift; sourceTree = "<group>"; };
+		42C2F44E267E08550044495F /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		42C2F452267E08C20044495F /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +82,12 @@
 		42C2F405267D23B30044495F /* FINCH */ = {
 			isa = PBXGroup;
 			children = (
+				42C2F455267E11E60044495F /* BusinessLogic */,
+				42C2F451267E08720044495F /* Model */,
+				42C2F44A267E04610044495F /* Service */,
+				42C2F425267D34730044495F /* Extension */,
 				42C2F440267D75160044495F /* Presenter */,
 				42C2F42E267D371C0044495F /* View */,
-				42C2F425267D34730044495F /* Extension */,
 				42C2F426267D34820044495F /* Coordinator */,
 				42C2F406267D23B30044495F /* AppDelegate.swift */,
 				42C2F408267D23B30044495F /* SceneDelegate.swift */,
@@ -127,6 +136,30 @@
 				42C2F441267D75690044495F /* DestinationPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		42C2F44A267E04610044495F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F44B267E05160044495F /* DumbGetterServiceProtocol.swift */,
+				42C2F452267E08C20044495F /* StationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		42C2F451267E08720044495F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F44E267E08550044495F /* StationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		42C2F455267E11E60044495F /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,14 +234,17 @@
 			files = (
 				42C2F41E267D31AA0044495F /* Coordinator.swift in Sources */,
 				42C2F42C267D35EA0044495F /* BusCoordinator.swift in Sources */,
+				42C2F453267E08C20044495F /* StationService.swift in Sources */,
 				42C2F40B267D23B30044495F /* DestinationViewController.swift in Sources */,
 				42C2F448267D83400044495F /* DetailsCoordinator.swift in Sources */,
 				42C2F442267D75690044495F /* DestinationPresenter.swift in Sources */,
 				42C2F435267D3B860044495F /* TrainCoordinator.swift in Sources */,
 				42C2F430267D37670044495F /* MainTabBarViewController.swift in Sources */,
+				42C2F44F267E08550044495F /* StationModel.swift in Sources */,
 				42C2F422267D34140044495F /* UIViewcontroller+Extension.swift in Sources */,
 				42C2F407267D23B30044495F /* AppDelegate.swift in Sources */,
 				42C2F409267D23B30044495F /* SceneDelegate.swift in Sources */,
+				42C2F44C267E05160044495F /* DumbGetterServiceProtocol.swift in Sources */,
 				42C2F43B267D5A290044495F /* UINavigationController+Extension.swift in Sources */,
 				42C2F43E267D64160044495F /* UIColor+Extension.swift in Sources */,
 				42C2F445267D803F0044495F /* DetailsViewController.swift in Sources */,
