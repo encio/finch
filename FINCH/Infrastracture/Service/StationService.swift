@@ -11,7 +11,7 @@ import Foundation
 class StationService: DumbGetterServiceProtocol{
   typealias Data = Station
   
-  func get(completionHandler: @escaping(Result<Station>) -> Void) {
+  func get(completionHandler: @escaping(Result<Data>) -> Void) {
     let url = URL(string: "https://myttc.ca/finch_station.json")!
     
     let task = URLSession.shared.dataTask(with: url) {(data, response, error) in

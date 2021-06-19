@@ -18,7 +18,7 @@ import Foundation
 // MARK: - Station
 class Station: Codable {
   let time: Int
-  let stops: [Stop]
+  var stops: [Stop]
   let uri, name: String
   
 
@@ -34,8 +34,8 @@ class Station: Codable {
 
 // MARK: - Stop
 class Stop: Codable {
-  let name, uri: String
-  let routes: [Route]
+  var name, uri: String
+  var routes: [Route]
   let agency: Agency
   
   init(name: String, uri: String, routes: [Route], agency: Agency) {
@@ -72,7 +72,7 @@ class Route: Codable {
 
 // MARK: - StopTime
 class StopTime: Codable {
-  let departureTime, shape: String
+  var departureTime, shape: String
   let departureTimestamp, serviceID: Int
   
   enum CodingKeys: String, CodingKey {

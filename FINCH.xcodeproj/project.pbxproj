@@ -26,7 +26,31 @@
 		42C2F44C267E05160044495F /* DumbGetterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F44B267E05160044495F /* DumbGetterServiceProtocol.swift */; };
 		42C2F44F267E08550044495F /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F44E267E08550044495F /* StationModel.swift */; };
 		42C2F453267E08C20044495F /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F452267E08C20044495F /* StationService.swift */; };
+		42C2F45D267E12FC0044495F /* FINCHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F45C267E12FC0044495F /* FINCHTests.swift */; };
+		42C2F467267E13AE0044495F /* DisplayStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F466267E13AE0044495F /* DisplayStationUseCase.swift */; };
+		42C2F47E267E3BE70044495F /* FinchMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F47D267E3BE70044495F /* FinchMockService.swift */; };
+		42C2F488267E40E10044495F /* DisplayStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F466267E13AE0044495F /* DisplayStationUseCase.swift */; };
+		42C2F495267E42990044495F /* FinchMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F47D267E3BE70044495F /* FinchMockService.swift */; };
+		42C2F498267E4D8D0044495F /* DumbGetterServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F44B267E05160044495F /* DumbGetterServiceProtocol.swift */; };
+		42C2F49B267E4D910044495F /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F452267E08C20044495F /* StationService.swift */; };
+		42C2F49E267E4D9F0044495F /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F44E267E08550044495F /* StationModel.swift */; };
+		42C2F4A2267E50DD0044495F /* finch.json in Resources */ = {isa = PBXBuildFile; fileRef = 42C2F4A1267E50DD0044495F /* finch.json */; };
+		42C2F4A3267E50DD0044495F /* finch.json in Resources */ = {isa = PBXBuildFile; fileRef = 42C2F4A1267E50DD0044495F /* finch.json */; };
+		42C2F4A7267E5B360044495F /* BusStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4A6267E5B360044495F /* BusStationModel.swift */; };
+		42C2F4A8267E5B360044495F /* BusStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4A6267E5B360044495F /* BusStationModel.swift */; };
+		42C2F4AC267E5B430044495F /* TrainStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4AB267E5B430044495F /* TrainStationModel.swift */; };
+		42C2F4B2267E5FDA0044495F /* TrainStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4AB267E5B430044495F /* TrainStationModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42C2F45F267E12FC0044495F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42C2F3FB267D23B30044495F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42C2F402267D23B30044495F;
+			remoteInfo = FINCH;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		42C2F403267D23B30044495F /* FINCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FINCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,10 +74,25 @@
 		42C2F44B267E05160044495F /* DumbGetterServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumbGetterServiceProtocol.swift; sourceTree = "<group>"; };
 		42C2F44E267E08550044495F /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		42C2F452267E08C20044495F /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
+		42C2F45A267E12FC0044495F /* FINCHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FINCHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C2F45C267E12FC0044495F /* FINCHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FINCHTests.swift; sourceTree = "<group>"; };
+		42C2F45E267E12FC0044495F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C2F466267E13AE0044495F /* DisplayStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayStationUseCase.swift; sourceTree = "<group>"; };
+		42C2F47D267E3BE70044495F /* FinchMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinchMockService.swift; sourceTree = "<group>"; };
+		42C2F4A1267E50DD0044495F /* finch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = finch.json; sourceTree = "<group>"; };
+		42C2F4A6267E5B360044495F /* BusStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStationModel.swift; sourceTree = "<group>"; };
+		42C2F4AB267E5B430044495F /* TrainStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainStationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		42C2F400267D23B30044495F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2F457267E12FC0044495F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				42C2F405267D23B30044495F /* FINCH */,
+				42C2F45B267E12FC0044495F /* FINCHTests */,
 				42C2F404267D23B30044495F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				42C2F403267D23B30044495F /* FINCH.app */,
+				42C2F45A267E12FC0044495F /* FINCHTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,13 +123,10 @@
 		42C2F405267D23B30044495F /* FINCH */ = {
 			isa = PBXGroup;
 			children = (
-				42C2F455267E11E60044495F /* BusinessLogic */,
-				42C2F451267E08720044495F /* Model */,
-				42C2F44A267E04610044495F /* Service */,
-				42C2F425267D34730044495F /* Extension */,
-				42C2F440267D75160044495F /* Presenter */,
-				42C2F42E267D371C0044495F /* View */,
-				42C2F426267D34820044495F /* Coordinator */,
+				42C2F475267E3A940044495F /* Common */,
+				42C2F474267E3A640044495F /* Infrastracture */,
+				42C2F46D267E3A570044495F /* Domain */,
+				42C2F46A267E3A2D0044495F /* Presentation */,
 				42C2F406267D23B30044495F /* AppDelegate.swift */,
 				42C2F408267D23B30044495F /* SceneDelegate.swift */,
 				42C2F40F267D23B70044495F /* Assets.xcassets */,
@@ -151,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				42C2F44E267E08550044495F /* StationModel.swift */,
+				42C2F4A6267E5B360044495F /* BusStationModel.swift */,
+				42C2F4AB267E5B430044495F /* TrainStationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,8 +198,63 @@
 		42C2F455267E11E60044495F /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				42C2F466267E13AE0044495F /* DisplayStationUseCase.swift */,
 			);
 			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		42C2F45B267E12FC0044495F /* FINCHTests */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F45C267E12FC0044495F /* FINCHTests.swift */,
+				42C2F45E267E12FC0044495F /* Info.plist */,
+			);
+			path = FINCHTests;
+			sourceTree = "<group>";
+		};
+		42C2F46A267E3A2D0044495F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F451267E08720044495F /* Model */,
+				42C2F42E267D371C0044495F /* View */,
+				42C2F440267D75160044495F /* Presenter */,
+				42C2F426267D34820044495F /* Coordinator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		42C2F46D267E3A570044495F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F455267E11E60044495F /* BusinessLogic */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		42C2F474267E3A640044495F /* Infrastracture */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F44A267E04610044495F /* Service */,
+				42C2F483267E3BEF0044495F /* Mock */,
+			);
+			path = Infrastracture;
+			sourceTree = "<group>";
+		};
+		42C2F475267E3A940044495F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F425267D34730044495F /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		42C2F483267E3BEF0044495F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F47D267E3BE70044495F /* FinchMockService.swift */,
+				42C2F4A1267E50DD0044495F /* finch.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +277,24 @@
 			productReference = 42C2F403267D23B30044495F /* FINCH.app */;
 			productType = "com.apple.product-type.application";
 		};
+		42C2F459267E12FC0044495F /* FINCHTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C2F461267E12FC0044495F /* Build configuration list for PBXNativeTarget "FINCHTests" */;
+			buildPhases = (
+				42C2F456267E12FC0044495F /* Sources */,
+				42C2F457267E12FC0044495F /* Frameworks */,
+				42C2F458267E12FC0044495F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42C2F460267E12FC0044495F /* PBXTargetDependency */,
+			);
+			name = FINCHTests;
+			productName = FINCHTests;
+			productReference = 42C2F45A267E12FC0044495F /* FINCHTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +306,10 @@
 				TargetAttributes = {
 					42C2F402267D23B30044495F = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					42C2F459267E12FC0044495F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 42C2F402267D23B30044495F;
 					};
 				};
 			};
@@ -210,6 +327,7 @@
 			projectRoot = "";
 			targets = (
 				42C2F402267D23B30044495F /* FINCH */,
+				42C2F459267E12FC0044495F /* FINCHTests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,7 +339,16 @@
 			files = (
 				42C2F413267D23B70044495F /* LaunchScreen.storyboard in Resources */,
 				42C2F410267D23B70044495F /* Assets.xcassets in Resources */,
+				42C2F4A2267E50DD0044495F /* finch.json in Resources */,
 				42C2F40E267D23B30044495F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42C2F458267E12FC0044495F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C2F4A3267E50DD0044495F /* finch.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +361,7 @@
 			files = (
 				42C2F41E267D31AA0044495F /* Coordinator.swift in Sources */,
 				42C2F42C267D35EA0044495F /* BusCoordinator.swift in Sources */,
+				42C2F4A7267E5B360044495F /* BusStationModel.swift in Sources */,
 				42C2F453267E08C20044495F /* StationService.swift in Sources */,
 				42C2F40B267D23B30044495F /* DestinationViewController.swift in Sources */,
 				42C2F448267D83400044495F /* DetailsCoordinator.swift in Sources */,
@@ -242,16 +370,42 @@
 				42C2F430267D37670044495F /* MainTabBarViewController.swift in Sources */,
 				42C2F44F267E08550044495F /* StationModel.swift in Sources */,
 				42C2F422267D34140044495F /* UIViewcontroller+Extension.swift in Sources */,
+				42C2F4AC267E5B430044495F /* TrainStationModel.swift in Sources */,
 				42C2F407267D23B30044495F /* AppDelegate.swift in Sources */,
 				42C2F409267D23B30044495F /* SceneDelegate.swift in Sources */,
+				42C2F47E267E3BE70044495F /* FinchMockService.swift in Sources */,
 				42C2F44C267E05160044495F /* DumbGetterServiceProtocol.swift in Sources */,
 				42C2F43B267D5A290044495F /* UINavigationController+Extension.swift in Sources */,
+				42C2F467267E13AE0044495F /* DisplayStationUseCase.swift in Sources */,
 				42C2F43E267D64160044495F /* UIColor+Extension.swift in Sources */,
 				42C2F445267D803F0044495F /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42C2F456267E12FC0044495F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C2F498267E4D8D0044495F /* DumbGetterServiceProtocol.swift in Sources */,
+				42C2F495267E42990044495F /* FinchMockService.swift in Sources */,
+				42C2F45D267E12FC0044495F /* FINCHTests.swift in Sources */,
+				42C2F4B2267E5FDA0044495F /* TrainStationModel.swift in Sources */,
+				42C2F49B267E4D910044495F /* StationService.swift in Sources */,
+				42C2F4A8267E5B360044495F /* BusStationModel.swift in Sources */,
+				42C2F49E267E4D9F0044495F /* StationModel.swift in Sources */,
+				42C2F488267E40E10044495F /* DisplayStationUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42C2F460267E12FC0044495F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42C2F402267D23B30044495F /* FINCH */;
+			targetProxy = 42C2F45F267E12FC0044495F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		42C2F40C267D23B30044495F /* Main.storyboard */ = {
@@ -425,6 +579,44 @@
 			};
 			name = Release;
 		};
+		42C2F462267E12FC0044495F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FINCHTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ph.com.myapp.FINCHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FINCH.app/FINCH";
+			};
+			name = Debug;
+		};
+		42C2F463267E12FC0044495F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FINCHTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ph.com.myapp.FINCHTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FINCH.app/FINCH";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +634,15 @@
 			buildConfigurations = (
 				42C2F418267D23B70044495F /* Debug */,
 				42C2F419267D23B70044495F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42C2F461267E12FC0044495F /* Build configuration list for PBXNativeTarget "FINCHTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C2F462267E12FC0044495F /* Debug */,
+				42C2F463267E12FC0044495F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

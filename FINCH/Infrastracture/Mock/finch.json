@@ -1,0 +1,451 @@
+{
+"time": 1624100788,
+"stops": [
+{
+"name": "Finch Station Bishop Entrance",
+"uri": "finch_station_bishop_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Bus Bay",
+"uri": "finch_station_bus_bay",
+"routes": [
+{
+"name": "36 Finch West",
+"uri": "36_finch_west",
+"stop_times": [
+{
+"departure_time": "7:15a",
+"shape": "36B Finch West To Humberwood",
+"departure_timestamp": 1624101309,
+"service_id": 2
+},
+{
+"departure_time": "7:25a",
+"shape": "36B Finch West To Humberwood",
+"departure_timestamp": 1624101909,
+"service_id": 2
+},
+{
+"departure_time": "7:35a",
+"shape": "36B Finch West To Humberwood",
+"departure_timestamp": 1624102509,
+"service_id": 2
+},
+{
+"departure_time": "10:06a",
+"shape": "36A Finch West To Kipling",
+"departure_timestamp": 1624111569,
+"service_id": 2
+},
+{
+"departure_time": "10:17a",
+"shape": "36A Finch West To Kipling",
+"departure_timestamp": 1624112229,
+"service_id": 2
+},
+{
+"departure_time": "10:28a",
+"shape": "36A Finch West To Kipling",
+"departure_timestamp": 1624112889,
+"service_id": 2
+}
+],
+"route_group_id": "32"
+},
+{
+"name": "39 Finch East",
+"uri": "39_finch_east",
+"stop_times": [
+{
+"departure_time": "7:08a",
+"shape": "39D Finch East To Neilson",
+"departure_timestamp": 1624100919,
+"service_id": 2
+},
+{
+"departure_time": "7:16a",
+"shape": "39D Finch East To Neilson",
+"departure_timestamp": 1624101369,
+"service_id": 2
+},
+{
+"departure_time": "7:23a",
+"shape": "39D Finch East To Neilson",
+"departure_timestamp": 1624101819,
+"service_id": 2
+},
+{
+"departure_time": "9:03a",
+"shape": "39E Finch East To Neilson Express",
+"departure_timestamp": 1624107789,
+"service_id": 2
+},
+{
+"departure_time": "9:10a",
+"shape": "39E Finch East To Neilson Express",
+"departure_timestamp": 1624108239,
+"service_id": 2
+},
+{
+"departure_time": "9:18a",
+"shape": "39E Finch East To Neilson Express",
+"departure_timestamp": 1624108689,
+"service_id": 2
+}
+],
+"route_group_id": "35"
+},
+{
+"name": "42 Cummer",
+"uri": "42_cummer",
+"stop_times": [
+{
+"departure_time": "7:10a",
+"shape": "42A Cummer To Middlefield",
+"departure_timestamp": 1624101009,
+"service_id": 2
+},
+{
+"departure_time": "7:30a",
+"shape": "42A Cummer To Middlefield",
+"departure_timestamp": 1624102209,
+"service_id": 2
+},
+{
+"departure_time": "7:50a",
+"shape": "42A Cummer To Middlefield",
+"departure_timestamp": 1624103409,
+"service_id": 2
+},
+{
+"departure_time": "10:45a",
+"shape": "42B Cummer To Kennedy",
+"departure_timestamp": 1624113909,
+"service_id": 2
+},
+{
+"departure_time": "11:15a",
+"shape": "42B Cummer To Kennedy",
+"departure_timestamp": 1624115709,
+"service_id": 2
+},
+{
+"departure_time": "11:45a",
+"shape": "42B Cummer To Kennedy",
+"departure_timestamp": 1624117509,
+"service_id": 2
+}
+],
+"route_group_id": "38"
+},
+{
+"name": "53 Steeles East",
+"uri": "53_steeles_east",
+"stop_times": [
+{
+"departure_time": "7:12a",
+"shape": "53B Steeles East To Markham Road",
+"departure_timestamp": 1624101129,
+"service_id": 2
+},
+{
+"departure_time": "7:26a",
+"shape": "53A Steeles East To Middlefield",
+"departure_timestamp": 1624101969,
+"service_id": 2
+},
+{
+"departure_time": "7:39a",
+"shape": "53B Steeles East To Markham Road",
+"departure_timestamp": 1624102749,
+"service_id": 2
+},
+{
+"departure_time": "7:53a",
+"shape": "53A Steeles East To Middlefield",
+"departure_timestamp": 1624103589,
+"service_id": 2
+},
+{
+"departure_time": "8:06a",
+"shape": "53B Steeles East To Markham Road",
+"departure_timestamp": 1624104369,
+"service_id": 2
+},
+{
+"departure_time": "8:20a",
+"shape": "53A Steeles East To Middlefield",
+"departure_timestamp": 1624105209,
+"service_id": 2
+}
+],
+"route_group_id": "49"
+},
+{
+"name": "60 Steeles West",
+"uri": "60_steeles_west",
+"stop_times": [
+{
+"departure_time": "7:15a",
+"shape": "60D Steeles West To Highway 27",
+"departure_timestamp": 1624101309,
+"service_id": 2
+},
+{
+"departure_time": "7:30a",
+"shape": "60D Steeles West To Highway 27",
+"departure_timestamp": 1624102209,
+"service_id": 2
+},
+{
+"departure_time": "7:45a",
+"shape": "60D Steeles West To Highway 27",
+"departure_timestamp": 1624103109,
+"service_id": 2
+},
+{
+"departure_time": "8:28a",
+"shape": "60C Steeles West To York University",
+"departure_timestamp": 1624105689,
+"service_id": 2
+},
+{
+"departure_time": "8:39a",
+"shape": "60C Steeles West To York University",
+"departure_timestamp": 1624106349,
+"service_id": 2
+},
+{
+"departure_time": "8:50a",
+"shape": "60C Steeles West To York University",
+"departure_timestamp": 1624107009,
+"service_id": 2
+},
+{
+"departure_time": "6:16p",
+"shape": "60B Steeles West To Martin Grove",
+"departure_timestamp": 1624140969,
+"service_id": 2
+},
+{
+"departure_time": "6:36p",
+"shape": "60B Steeles West To Martin Grove",
+"departure_timestamp": 1624142169,
+"service_id": 2
+},
+{
+"departure_time": "6:56p",
+"shape": "60B Steeles West To Martin Grove",
+"departure_timestamp": 1624143369,
+"service_id": 2
+}
+],
+"route_group_id": "56"
+},
+{
+"name": "97 Yonge",
+"uri": "97_yonge",
+"stop_times": [
+{
+"departure_time": "7:14a",
+"shape": "97 Yonge To Steeles",
+"departure_timestamp": 1624101267,
+"service_id": 2
+},
+{
+"departure_time": "7:44a",
+"shape": "97 Yonge To Steeles",
+"departure_timestamp": 1624103067,
+"service_id": 2
+},
+{
+"departure_time": "8:14a",
+"shape": "97 Yonge To Steeles",
+"departure_timestamp": 1624104867,
+"service_id": 2
+}
+],
+"route_group_id": "92"
+},
+{
+"name": "125 Drewry",
+"uri": "125_drewry",
+"stop_times": [
+{
+"departure_time": "7:30a",
+"shape": "125 Drewry To Bathurst Torresdale",
+"departure_timestamp": 1624102209,
+"service_id": 2
+},
+{
+"departure_time": "8:00a",
+"shape": "125 Drewry To Bathurst Torresdale",
+"departure_timestamp": 1624104009,
+"service_id": 2
+},
+{
+"departure_time": "8:30a",
+"shape": "125 Drewry To Bathurst Torresdale",
+"departure_timestamp": 1624105809,
+"service_id": 2
+}
+],
+"route_group_id": "116"
+},
+{
+"name": "308 Finch East",
+"uri": "308_finch_east",
+"stop_times": [
+{
+"departure_time": "2:00a",
+"shape": "308 Finch East To Markham Road",
+"departure_timestamp": 1624168809,
+"service_id": 3
+},
+{
+"departure_time": "2:30a",
+"shape": "308 Finch East To Markham Road",
+"departure_timestamp": 1624170609,
+"service_id": 3
+},
+{
+"departure_time": "3:00a",
+"shape": "308 Finch East To Markham Road",
+"departure_timestamp": 1624172409,
+"service_id": 3
+}
+],
+"route_group_id": "152"
+},
+{
+"name": "309 Finch West",
+"uri": "309_finch_west",
+"stop_times": [
+{
+"departure_time": "2:00a",
+"shape": "309 Finch West To Woodbine Racetrack",
+"departure_timestamp": 1624168809,
+"service_id": 3
+},
+{
+"departure_time": "2:30a",
+"shape": "309 Finch West To Woodbine Racetrack",
+"departure_timestamp": 1624170609,
+"service_id": 3
+},
+{
+"departure_time": "3:00a",
+"shape": "309 Finch West To Woodbine Racetrack",
+"departure_timestamp": 1624172409,
+"service_id": 3
+}
+],
+"route_group_id": "153"
+}
+],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Concourse",
+"uri": "finch_station_concourse",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Elevator Entrance",
+"uri": "finch_station_elevator_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station GO Hallway",
+"uri": "finch_station_go_hallway",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Mezzanine",
+"uri": "finch_station_mezzanine",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Northeast Entrance",
+"uri": "finch_station_northeast_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Northwest Entrance",
+"uri": "finch_station_northwest_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Passenger Pick Up",
+"uri": "finch_station_passenger_pick_up",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Passenger Pick Up Mezzanine",
+"uri": "finch_station_passenger_pick_up_mezzanine",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Pemberton Entrance",
+"uri": "finch_station_pemberton_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Subway Platform",
+"uri": "finch_station_subway_platform",
+"routes": [
+{
+"name": "Yonge-University-Spadina Subway",
+"uri": "yonge-university-spadina_subway",
+"stop_times": [
+{
+"departure_time": "7:08a",
+"shape": "Yonge-University-Spadina Subway To Downsview Station",
+"departure_timestamp": 1624100897,
+"service_id": 2
+},
+{
+"departure_time": "7:13a",
+"shape": "Yonge-University-Spadina Subway To Downsview Station",
+"departure_timestamp": 1624101189,
+"service_id": 2
+},
+{
+"departure_time": "7:18a",
+"shape": "Yonge-University-Spadina Subway To Downsview Station",
+"departure_timestamp": 1624101481,
+"service_id": 2
+}
+],
+"route_group_id": "1"
+}
+],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Yonge East Entrance",
+"uri": "finch_station_yonge_east_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+},
+{
+"name": "Finch Station Yonge West Entrance",
+"uri": "finch_station_yonge_west_entrance",
+"routes": [],
+"agency": "Toronto Transit Commission"
+}
+],
+"uri": "finch_station",
+"name": "Finch Station"
+}

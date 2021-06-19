@@ -15,7 +15,6 @@ enum Result<T> {
 
 //Doing this for the sake of simplicity!
 protocol DumbGetterServiceProtocol {
-  associatedtype Data
 
-  func get( completionHandler: @escaping(Result<Data>) -> Void)
+  func get( completionHandler: @escaping(Result<Station>) -> Void)
 }
