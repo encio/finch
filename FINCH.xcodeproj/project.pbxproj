@@ -20,6 +20,7 @@
 		42C2F435267D3B860044495F /* TrainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F434267D3B860044495F /* TrainCoordinator.swift */; };
 		42C2F43B267D5A290044495F /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F43A267D5A290044495F /* UINavigationController+Extension.swift */; };
 		42C2F43E267D64160044495F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F43D267D64160044495F /* UIColor+Extension.swift */; };
+		42C2F442267D75690044495F /* DestinationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F441267D75690044495F /* DestinationPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		42C2F434267D3B860044495F /* TrainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainCoordinator.swift; sourceTree = "<group>"; };
 		42C2F43A267D5A290044495F /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		42C2F43D267D64160044495F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		42C2F441267D75690044495F /* DestinationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		42C2F405267D23B30044495F /* FINCH */ = {
 			isa = PBXGroup;
 			children = (
+				42C2F440267D75160044495F /* Presenter */,
 				42C2F42E267D371C0044495F /* View */,
 				42C2F425267D34730044495F /* Extension */,
 				42C2F426267D34820044495F /* Coordinator */,
@@ -110,6 +113,14 @@
 				42C2F42F267D37670044495F /* MainTabBarViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		42C2F440267D75160044495F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				42C2F441267D75690044495F /* DestinationPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				42C2F41E267D31AA0044495F /* Coordinator.swift in Sources */,
 				42C2F42C267D35EA0044495F /* BusCoordinator.swift in Sources */,
 				42C2F40B267D23B30044495F /* DestinationViewController.swift in Sources */,
+				42C2F442267D75690044495F /* DestinationPresenter.swift in Sources */,
 				42C2F435267D3B860044495F /* TrainCoordinator.swift in Sources */,
 				42C2F430267D37670044495F /* MainTabBarViewController.swift in Sources */,
 				42C2F422267D34140044495F /* UIViewcontroller+Extension.swift in Sources */,

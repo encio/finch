@@ -18,8 +18,8 @@ class BusCoordinator: Coordinator {
   
   func start() {
     let vc: DestinationViewController = .initialize()
-    vc.pageName = "Bus"
     vc.tabBarItem = UITabBarItem(title: "Bus".uppercased(), image: UIImage(named: "bus-100.png"), tag: 0)
+    vc.presenter = DestinationPresenter(delegate: vc)
     navigationController.pushViewController(vc, animated: false)
   }
   

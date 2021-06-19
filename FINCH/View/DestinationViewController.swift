@@ -8,6 +8,9 @@
 import UIKit
 
 final class DestinationViewController: UIViewController {
+  
+  var presenter: DestinationPresenter?
+  
   @IBOutlet weak var stationTableView: UITableView!{
     didSet{
       stationTableView.dataSource = self
@@ -15,7 +18,6 @@ final class DestinationViewController: UIViewController {
     }
   }
   
-  var pageName = ""
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -26,7 +28,7 @@ final class DestinationViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.title = pageName
+    self.title = presenter?.title
     navigationController?.configure(largeTitleColor: .barItemColor, backgoundColor: .barColor, tintColor: .systemRed, preferredLargeTitle: true)
     navigationController?.setStatusBar(backgroundColor: .barColor)
 
@@ -39,6 +41,11 @@ final class DestinationViewController: UIViewController {
   }
   
 }
+extension DestinationViewController: DestinationPresenterDelegate{
+  func update(index: Int) {
+    print("update \(index)")
+  }
+}
 
 
 extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
@@ -50,6 +57,9 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
     4
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    presenter?.didTapCell(index: indexPath.row)
+  }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "stationIdentifier") else {
@@ -78,7 +88,5 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
     label.textColor = UIColor.black
     return label
   }
-  
-  
 }
 
