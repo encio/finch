@@ -12,7 +12,6 @@ final class DestinationViewController: UIViewController {
     didSet{
       stationTableView.dataSource = self
       stationTableView.delegate = self
-      
     }
   }
   
