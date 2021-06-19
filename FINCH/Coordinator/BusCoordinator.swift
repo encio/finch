@@ -19,9 +19,18 @@ class BusCoordinator: Coordinator {
   func start() {
     let vc: DestinationViewController = .initialize()
     vc.tabBarItem = UITabBarItem(title: "Bus".uppercased(), image: UIImage(named: "bus-100.png"), tag: 0)
-    vc.presenter = DestinationPresenter(delegate: vc)
+    let presenter = DestinationPresenter(delegate: vc)
+    vc.presenter = presenter
+    presenter.shouldSegue = {[unowned self] in
+      self.gotoDetails()
+    }
     navigationController.pushViewController(vc, animated: false)
   }
   
+  func gotoDetails(){
+    let child = DetailsCoordinator(navigator: self.navigationController)
+    childCoordinators.append(child)
+    child.start()
+  }
   
 }

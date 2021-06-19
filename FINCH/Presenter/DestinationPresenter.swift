@@ -19,15 +19,16 @@ class DestinationPresenter {
   
   weak var delegate: DestinationPresenterDelegate?
   
-  
+  var shouldSegue: (()-> Void)?
   init(delegate: DestinationPresenterDelegateAlias) {
     self.delegate = delegate
   }
   var title: String = "Bus"
   
   func didTapCell(index: Int){
-    delegate?.update(index: index)
+    shouldSegue?()
   }
+  
   
   
   
