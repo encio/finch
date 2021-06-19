@@ -8,8 +8,7 @@
 import UIKit
 
 
-
-class TrainCoordinator: Coordinator {
+final class TrainCoordinator: Coordinator {
   var childCoordinators = [Coordinator]()
   
   var navigationController: UINavigationController

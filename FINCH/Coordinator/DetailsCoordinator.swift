@@ -17,13 +17,9 @@ final class DetailsCoordinator: Coordinator{
     self.navigationController = navigator
   }
   
-  
   func start() {
-    
     let detailsVC: DetailsViewController = .initialize()
-    print(detailsVC)
     navigationController.present(detailsVC, animated: true, completion: nil)
-    
   }
   
   

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+final class MainTabBarViewController: UITabBarController {
 
     let busCoordinator = BusCoordinator(navigation: UINavigationController())
     let trainCoordinator = TrainCoordinator(navigation: UINavigationController())

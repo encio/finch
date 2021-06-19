@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BusCoordinator: Coordinator {
+final class BusCoordinator: Coordinator {
   var childCoordinators = [Coordinator]()
   
   var navigationController: UINavigationController
