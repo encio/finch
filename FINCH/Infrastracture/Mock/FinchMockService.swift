@@ -24,13 +24,13 @@ final class MockHelper{
   }
 }
 
-class FinchMockServiceFailed: DumbGetterServiceProtocol{
+final class FinchMockServiceFailed: DumbGetterServiceProtocol{
   func get(completionHandler: @escaping(Result<Station>) -> Void) {
     completionHandler(.Failure("error"))
   }
 }
 
-class FinchMockBusOnly: DumbGetterServiceProtocol{
+final class FinchMockBusOnly: DumbGetterServiceProtocol{
   func get(completionHandler: @escaping(Result<Station>) -> Void) {
     guard let json = MockHelper.loadJson() else{
       return
@@ -45,7 +45,7 @@ class FinchMockBusOnly: DumbGetterServiceProtocol{
   }
 }
 
-class FinchMockTrainOnly: DumbGetterServiceProtocol{
+final class FinchMockTrainOnly: DumbGetterServiceProtocol{
   func get(completionHandler: @escaping(Result<Station>) -> Void) {
     guard let json = MockHelper.loadJson() else{
       return

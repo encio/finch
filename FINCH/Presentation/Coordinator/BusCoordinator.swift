@@ -19,7 +19,7 @@ final class BusCoordinator: Coordinator {
   func start() {
     let vc: DestinationViewController = .initialize()
     vc.tabBarItem = UITabBarItem(title: "Bus".uppercased(), image: UIImage(named: "bus-100.png"), tag: 0)
-    let presenter = DestinationPresenter(delegate: vc)
+    let presenter = DestinationPresenter(delegate: vc, type: .bus)
     vc.presenter = presenter
     presenter.shouldSegue = {[unowned self] in
       self.gotoDetails()

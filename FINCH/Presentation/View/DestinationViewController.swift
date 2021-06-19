@@ -21,6 +21,20 @@ final class DestinationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let display = DisplayStationUseCase(service: StationService())
+    display.delegate = self.presenter
+    display.fetchData{
+      for model in $0 {
+        print(model.name)
+        for route in model.stops{
+          print(route.busbay)
+          print(route.shape)
+          print(route.departure)
+        }
+      }
+      print($0)
+      print($1)
+    }
     self.navigationController?.navigationBar.prefersLargeTitles = true
     setupTableView()
     // Do any additional setup after loading the view.
@@ -43,18 +57,21 @@ final class DestinationViewController: UIViewController {
 }
 extension DestinationViewController: DestinationPresenterDelegate{
   func update(index: Int) {
-    print("update \(index)")
+    DispatchQueue.main.async {
+      self.stationTableView.reloadData()
+    }
+    
   }
 }
 
 
 extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    3
+    presenter?.getNumberOfRows(for: section) ?? 0
   }
   
   func numberOfSections(in tableView: UITableView) -> Int {
-    4
+    presenter?.getNumberOfSection() ?? 0
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -65,13 +82,14 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "stationIdentifier") else {
       return UITableViewCell()
     }
-    cell.textLabel?.text = "Downsview Station"
+    
+    cell.textLabel?.text = presenter?.getTitleFor(in: indexPath.section, with: indexPath.row)
     cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
     cell.textLabel?.numberOfLines = 0
     cell.textLabel?.lineBreakMode = .byWordWrapping
     cell.textLabel?.textColor = UIColor.black
     cell.imageView?.image = UIImage()
-    cell.detailTextLabel?.text = "(4) Left"
+    cell.detailTextLabel?.text = presenter?.getTotalStops(in: indexPath.section, with: indexPath.row)
     cell.detailTextLabel?.textColor = UIColor.gray
     return cell
   }
@@ -79,7 +97,7 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     
     let label = UILabel.init(frame: CGRect.init(x: 20, y: 20, width: tableView.frame.size.width, height: 35))
-    label.text = "Finch Station Subway Platform"
+    label.text = presenter?.getHeader(in: section)
     label.font = UIFont.boldSystemFont(ofSize: 25)
     label.numberOfLines = 0
     label.lineBreakMode = .byWordWrapping

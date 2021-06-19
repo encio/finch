@@ -15,12 +15,14 @@ struct Keys{
   }
 }
 
-protocol DisplayStationUseCaseDelegate{
+protocol DisplayStationUseCaseDelegate: AnyObject{
   func fetchData(busStation: [BusStationModel], trainStation: [TrainStationModel])
 }
+
+
 class DisplayStationUseCase{
   private let service: DumbGetterServiceProtocol
-  
+  weak var delegate: DisplayStationUseCaseDelegate?
   init(service: DumbGetterServiceProtocol){
     self.service = service
   }
@@ -29,9 +31,10 @@ class DisplayStationUseCase{
     service.get {
       switch $0{
       case .Success(let station):
-        completion(
-          self.getBusStation(station: station),
-          self.getTrainStation(station: station))
+        let bus = self.getBusStation(station: station)
+        let train = self.getTrainStation(station: station)
+        completion(bus,train)
+        self.delegate?.fetchData(busStation: bus, trainStation: train)
       case .Failure(_):
         completion([],[])
       }
@@ -48,15 +51,15 @@ class DisplayStationUseCase{
     guard let stops = filteredStop.first else{
       return []
     }
-    stationName = stops.name
     
     var trainStationModel = [TrainStationModel]()
     
     for route in stops.routes {
+      stationName = stops.name
       let stopTimes = route.stopTimes.map { (stopTime) -> StopTime in
         return StopTime(
           departureTime: stopTime.departureTime.appending("m"),
-          shape: stopTime.shape.replacingOccurrences(of: stationName, with: ""),
+          shape: stopTime.shape.replacingOccurrences(of: stationName.appending(" To "), with: ""),
           departureTimestamp: stopTime.departureTimestamp,
           serviceID: stopTime.serviceID
         )
@@ -78,15 +81,15 @@ class DisplayStationUseCase{
     guard let stops = filteredStop.first else{
       return []
     }
-    stationName = stops.name
     
     var busStationModel = [BusStationModel]()
     
     for route in stops.routes {
+      stationName = route.name
       let busStops = route.stopTimes.map { (stopTime) -> BusStops in
         return BusStops(
           busbay: "a" ,
-          shape: stopTime.shape.replacingOccurrences(of: stationName, with: ""), departure: stopTime.departureTime.appending("m"))
+          shape: stopTime.shape.replacingOccurrences(of: stationName.appending(" To "), with: ""), departure: stopTime.departureTime.appending("m"))
       }
       busStationModel.append(BusStationModel(name: stationName, stops: busStops))
     }
