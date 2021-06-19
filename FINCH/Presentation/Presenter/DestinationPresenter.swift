@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 
-
-
 enum stationType{
   case bus
   case train
@@ -84,7 +82,14 @@ class DestinationPresenter {
     return self.type == .bus ? busData[section].destination[indexOf].destination : trainData[section].destination[indexOf].destination
     
   }
-  
+  func getImage(in section: Int, with indexOf: Int) -> UIImage?{
+    switch self.type{
+    case .bus:
+      return UIImage(named: busData[section].destination[indexOf].imageName)
+    case .train:
+      return UIImage(named:trainData[section].destination[indexOf].imageName)
+    }
+  }
   func getTotalStops(in section: Int, with indexOf: Int) -> String{
     let time = self.type == .bus ? busData[section].destination[indexOf].time : trainData[section].destination[indexOf].time
     
@@ -102,6 +107,7 @@ extension DestinationPresenter: DisplayStationUseCaseDelegate{
       return DestinationPresenterData(
         header: bus.name,
         destination: bus.stops.map({ (stops) -> DestinationPresenterDataDetails in
+          print(stops.busbay)
           return DestinationPresenterDataDetails(
             destination: stops.shape,
             time: stops.departure,

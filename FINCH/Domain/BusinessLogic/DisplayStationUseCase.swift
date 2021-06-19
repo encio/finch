@@ -59,7 +59,7 @@ class DisplayStationUseCase{
       let stopTimes = route.stopTimes.map { (stopTime) -> StopTime in
         return StopTime(
           departureTime: stopTime.departureTime.appending("m"),
-          shape: stopTime.shape.replacingOccurrences(of: stationName.appending(" To "), with: ""),
+          shape: remove(stationName: stopTime.shape),
           departureTimestamp: stopTime.departureTimestamp,
           serviceID: stopTime.serviceID
         )
@@ -88,7 +88,7 @@ class DisplayStationUseCase{
       let busStops = route.stopTimes.map { (stopTime) -> BusStops in
         return BusStops(
           busbay: getBusBay(title: stationName, stop: stopTime.shape) ?? "",
-          shape: stopTime.shape.replacingOccurrences(of: stationName.appending(" To "), with: ""),
+          shape: remove(stationName: stopTime.shape),
           departure: stopTime.departureTime.appending("m"))
       }
       busStationModel.append(BusStationModel(name: stationName, stops: busStops))
@@ -97,10 +97,28 @@ class DisplayStationUseCase{
     return busStationModel
   }
   
-  //the letter represenstation of the terminal
+  
+  /// Removes the station name on the string
+  /// e.g. "60D Steeles West To Highway 27" to  "Highway 27"
+  /// - Parameter stationName: name of the station
+  /// - Returns: String
+  private func remove(stationName: String) -> String {
+    guard let range = stationName.range(of: " To ") else{
+       return stationName
+    }
+    return String(stationName[range.upperBound...])
+  }
+  
+  ///
+  /// The letter represenstation of the terminal
+  /// e.g. "60D Steeles West To Highway 27" get the  "D"
+  /// - Parameters:
+  ///   - title:name of station
+  ///   - stop: name of th stop
+  /// - Returns: Letter of the bus bas
   private func getBusBay(title: String, stop: String) -> String?{
     let diff = zip(title, stop).filter{$0 != $1 }.first
-    return diff?.0.uppercased()
+    return diff?.1.lowercased()
     
   }
   

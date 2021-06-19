@@ -40,6 +40,8 @@
 		42C2F4A8267E5B360044495F /* BusStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4A6267E5B360044495F /* BusStationModel.swift */; };
 		42C2F4AC267E5B430044495F /* TrainStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4AB267E5B430044495F /* TrainStationModel.swift */; };
 		42C2F4B2267E5FDA0044495F /* TrainStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4AB267E5B430044495F /* TrainStationModel.swift */; };
+		42C2F4B8267E99ED0044495F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4B7267E99ED0044495F /* BaseViewController.swift */; };
+		42C2F4B9267E99ED0044495F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2F4B7267E99ED0044495F /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		42C2F4A1267E50DD0044495F /* finch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = finch.json; sourceTree = "<group>"; };
 		42C2F4A6267E5B360044495F /* BusStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStationModel.swift; sourceTree = "<group>"; };
 		42C2F4AB267E5B430044495F /* TrainStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainStationModel.swift; sourceTree = "<group>"; };
+		42C2F4B7267E99ED0044495F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				42C2F425267D34730044495F /* Extension */,
+				42C2F4B7267E99ED0044495F /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -364,6 +368,7 @@
 				42C2F4A7267E5B360044495F /* BusStationModel.swift in Sources */,
 				42C2F453267E08C20044495F /* StationService.swift in Sources */,
 				42C2F40B267D23B30044495F /* DestinationViewController.swift in Sources */,
+				42C2F4B8267E99ED0044495F /* BaseViewController.swift in Sources */,
 				42C2F448267D83400044495F /* DetailsCoordinator.swift in Sources */,
 				42C2F442267D75690044495F /* DestinationPresenter.swift in Sources */,
 				42C2F435267D3B860044495F /* TrainCoordinator.swift in Sources */,
@@ -391,6 +396,7 @@
 				42C2F45D267E12FC0044495F /* FINCHTests.swift in Sources */,
 				42C2F4B2267E5FDA0044495F /* TrainStationModel.swift in Sources */,
 				42C2F49B267E4D910044495F /* StationService.swift in Sources */,
+				42C2F4B9267E99ED0044495F /* BaseViewController.swift in Sources */,
 				42C2F4A8267E5B360044495F /* BusStationModel.swift in Sources */,
 				42C2F49E267E4D9F0044495F /* StationModel.swift in Sources */,
 				42C2F488267E40E10044495F /* DisplayStationUseCase.swift in Sources */,

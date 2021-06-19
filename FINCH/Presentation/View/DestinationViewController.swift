@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DestinationViewController: UIViewController {
+final class DestinationViewController: BaseViewController {
   
   var presenter: DestinationPresenter?
   
@@ -23,6 +23,7 @@ final class DestinationViewController: UIViewController {
     self.navigationController?.navigationBar.prefersLargeTitles = true
     presenter?.fetchData()
     setupTableView()
+    showLoading()
     // Do any additional setup after loading the view.
   }
   
@@ -44,6 +45,7 @@ final class DestinationViewController: UIViewController {
 extension DestinationViewController: DestinationPresenterDelegate{
   func update(index: Int) {
     DispatchQueue.main.async {
+      self.hidLoading()
       self.stationTableView.reloadData()
     }
   }
@@ -73,7 +75,7 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
     cell.textLabel?.numberOfLines = 0
     cell.textLabel?.lineBreakMode = .byWordWrapping
     cell.textLabel?.textColor = UIColor.black
-    cell.imageView?.image = UIImage()
+    cell.imageView?.image = presenter?.getImage(in: indexPath.section, with: indexPath.row)
     cell.detailTextLabel?.text = presenter?.getTotalStops(in: indexPath.section, with: indexPath.row)
     cell.detailTextLabel?.textColor = UIColor.gray
     return cell
