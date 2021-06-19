@@ -71,7 +71,6 @@ class DisplayStationUseCase{
   }
   
   
-  
   private func getBusStation(station: Station) -> [BusStationModel]{
     var stationName: String = ""
     let filteredStop = station.stops.filter{
@@ -88,12 +87,21 @@ class DisplayStationUseCase{
       stationName = route.name
       let busStops = route.stopTimes.map { (stopTime) -> BusStops in
         return BusStops(
-          busbay: "a" ,
-          shape: stopTime.shape.replacingOccurrences(of: stationName.appending(" To "), with: ""), departure: stopTime.departureTime.appending("m"))
+          busbay: getBusBay(title: stationName, stop: stopTime.shape) ?? "",
+          shape: stopTime.shape.replacingOccurrences(of: stationName.appending(" To "), with: ""),
+          departure: stopTime.departureTime.appending("m"))
       }
       busStationModel.append(BusStationModel(name: stationName, stops: busStops))
     }
     
     return busStationModel
   }
+  
+  //the letter represenstation of the terminal
+  private func getBusBay(title: String, stop: String) -> String?{
+    let diff = zip(title, stop).filter{$0 != $1 }.first
+    return diff?.0.uppercased()
+    
+  }
+  
 }

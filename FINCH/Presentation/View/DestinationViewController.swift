@@ -20,22 +20,8 @@ final class DestinationViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let display = DisplayStationUseCase(service: StationService())
-    display.delegate = self.presenter
-    display.fetchData{
-      for model in $0 {
-        print(model.name)
-        for route in model.stops{
-          print(route.busbay)
-          print(route.shape)
-          print(route.departure)
-        }
-      }
-      print($0)
-      print($1)
-    }
     self.navigationController?.navigationBar.prefersLargeTitles = true
+    presenter?.fetchData()
     setupTableView()
     // Do any additional setup after loading the view.
   }
@@ -60,7 +46,6 @@ extension DestinationViewController: DestinationPresenterDelegate{
     DispatchQueue.main.async {
       self.stationTableView.reloadData()
     }
-    
   }
 }
 

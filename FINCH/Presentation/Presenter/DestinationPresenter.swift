@@ -18,7 +18,12 @@ enum stationType{
 
 struct DestinationPresenterData {
   var header: String
-  var destination: [String]
+  var destination: [DestinationPresenterDataDetails]
+}
+struct DestinationPresenterDataDetails {
+  var destination: String
+  var time: String
+  var imageName: String = ""
 }
 
 protocol DestinationPresenterDelegate: AnyObject {
@@ -57,7 +62,13 @@ class DestinationPresenter {
     default:
       return trainData[section].header
     }
- 
+    
+  }
+  
+  func fetchData(){
+    let display = DisplayStationUseCase(service: StationService())
+    display.delegate = self
+    display.fetchData{ _, _ in }
   }
   
   func getNumberOfSection() -> Int{
@@ -69,14 +80,17 @@ class DestinationPresenter {
   }
   
   func getTitleFor(in section: Int, with indexOf: Int) -> String{
-    return self.type == .bus ? busData[section].destination[indexOf] : trainData[section].destination[indexOf]
+    
+    return self.type == .bus ? busData[section].destination[indexOf].destination : trainData[section].destination[indexOf].destination
+    
   }
   
   func getTotalStops(in section: Int, with indexOf: Int) -> String{
-    return self.type == .bus ? "\(busData[section].destination.count) stop(s)" : "\(trainData[section].destination.count) stop(s)"
+    let time = self.type == .bus ? busData[section].destination[indexOf].time : trainData[section].destination[indexOf].time
+    
+    return "Departure time: \(time)"
   }
   func didTapCell(index: Int){
-    
     shouldSegue?()
   }
   
@@ -87,16 +101,23 @@ extension DestinationPresenter: DisplayStationUseCaseDelegate{
     self.busData = busStation.map({ (bus) -> DestinationPresenterData in
       return DestinationPresenterData(
         header: bus.name,
-        destination: bus.stops.map({ (stops) -> String in
-          stops.shape
+        destination: bus.stops.map({ (stops) -> DestinationPresenterDataDetails in
+          return DestinationPresenterDataDetails(
+            destination: stops.shape,
+            time: stops.departure,
+            imageName: stops.busbay
+          )
         }))
     })
     
     self.trainData = trainStation.map({ (train) -> DestinationPresenterData in
       return DestinationPresenterData(
         header: train.name,
-        destination: train.stops.map({ (stops) -> String in
-          stops.shape
+        destination: train.stops.map({ (stops) -> DestinationPresenterDataDetails in
+          return DestinationPresenterDataDetails(
+            destination: stops.shape,
+            time: stops.departureTime
+          )
         }))
     })
     
