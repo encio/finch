@@ -10,7 +10,7 @@ import MapKit
 final class DetailsViewController: UIViewController {
   
   @IBOutlet weak var stationLabel: UILabel!
-  var searchLocation: String = "Kipling"
+  var searchLocation: String = ""
   @IBOutlet weak var mapView: MKMapView!
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,9 +53,7 @@ final class DetailsViewController: UIViewController {
     }
   }
   
-  @IBAction func showDirection(_ sender: UIButton) {
-    
-  }
+  @IBAction func exit(_ sender: UIButton) {}
   private func setupMap(){
     mapView.delegate = self
     mapView.mapType = MKMapType.mutedStandard

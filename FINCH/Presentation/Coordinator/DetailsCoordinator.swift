@@ -17,10 +17,12 @@ final class DetailsCoordinator: Coordinator{
     self.navigationController = navigator
   }
   
-  func start() {
+  func start(station: String) {
     let detailsVC: DetailsViewController = .initialize()
+    detailsVC.searchLocation = station
     navigationController.present(detailsVC, animated: true, completion: nil)
   }
+  func start() {}
   
   
   

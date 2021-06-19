@@ -34,7 +34,7 @@ class DestinationPresenter {
   
   weak var delegate: DestinationPresenterDelegate?
   var type: stationType
-  var shouldSegue: (()-> Void)?
+  var shouldSegue: ((String)-> Void)?
   init(delegate: DestinationPresenterDelegateAlias, type: stationType = .bus) {
     self.delegate = delegate
     self.type = type
@@ -95,8 +95,9 @@ class DestinationPresenter {
     
     return "Departure time: \(time)"
   }
-  func didTapCell(index: Int){
-    shouldSegue?()
+  func didTapCell(index: IndexPath){
+    let station = self.type == .bus ? busData[index.section].destination[index.row].destination : trainData[index.section].destination[index.row].destination
+    shouldSegue?(station)
   }
   
 }

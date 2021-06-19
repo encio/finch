@@ -62,7 +62,7 @@ extension DestinationViewController: UITableViewDelegate,UITableViewDataSource{
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    presenter?.didTapCell(index: indexPath.row)
+    presenter?.didTapCell(index: indexPath)
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -73,19 +73,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xU1-yB-HX7">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="672"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CdA-dV-dNw">
-                                <rect key="frame" x="0.0" y="736" width="414" height="160"/>
+                                <rect key="frame" x="0.0" y="716" width="414" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finch to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDP-8J-0I9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="108.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ao-la-Mbb">
-                                        <rect key="frame" x="0.0" y="90" width="414" height="70"/>
+                                        <rect key="frame" x="0.0" y="110" width="414" height="70"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="dXe-Gp-mw5"/>
@@ -107,7 +107,7 @@
                             <constraint firstAttribute="bottom" secondItem="CdA-dV-dNw" secondAttribute="bottom" id="aDp-Ky-chm"/>
                             <constraint firstItem="CdA-dV-dNw" firstAttribute="leading" secondItem="UlO-o1-fl2" secondAttribute="leading" id="fzd-Nl-vIj"/>
                             <constraint firstItem="xU1-yB-HX7" firstAttribute="height" secondItem="lDc-xR-NR8" secondAttribute="height" multiplier="3:4" id="hgj-3j-0PU"/>
-                            <constraint firstItem="xU1-yB-HX7" firstAttribute="top" secondItem="UlO-o1-fl2" secondAttribute="top" constant="20" id="iRN-ua-3A8"/>
+                            <constraint firstItem="xU1-yB-HX7" firstAttribute="top" secondItem="UlO-o1-fl2" secondAttribute="top" id="iRN-ua-3A8"/>
                             <constraint firstItem="CdA-dV-dNw" firstAttribute="top" secondItem="xU1-yB-HX7" secondAttribute="bottom" id="kqc-a6-vxW"/>
                         </constraints>
                     </view>

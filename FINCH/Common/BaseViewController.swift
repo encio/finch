@@ -21,12 +21,13 @@ class BaseViewController: UIViewController {
   func showLoading(){
     alert.title = nil
     alert.message = waitingQuotes[Int.random(in: 0..<3)]
-    let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
-    loadingIndicator.hidesWhenStopped = true
-    loadingIndicator.style = UIActivityIndicatorView.Style.large
-    loadingIndicator.startAnimating();
+   
+//    let loadingIndicator = UIActivityIndicatorView(frame:  CGRect(origin: self.view.center, size: CGSize(width: 20, height: 20)))
+//    loadingIndicator.hidesWhenStopped = true
+//    loadingIndicator.style = UIActivityIndicatorView.Style.large
+//    loadingIndicator.startAnimating();
     
-    alert.view.addSubview(loadingIndicator)
+//    alert.view.addSubview(loadingIndicator)
     self.present(alert, animated: true, completion: nil)
   }
   

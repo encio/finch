@@ -21,16 +21,16 @@ final class BusCoordinator: Coordinator {
     vc.tabBarItem = UITabBarItem(title: "Bus".uppercased(), image: UIImage(named: "bus-100.png"), tag: 0)
     let presenter = DestinationPresenter(delegate: vc, type: .bus)
     vc.presenter = presenter
-    presenter.shouldSegue = {[unowned self] in
-      self.gotoDetails()
+    presenter.shouldSegue = {[unowned self] (station) in
+      self.gotoDetails(station: station)
     }
     navigationController.pushViewController(vc, animated: false)
   }
   
-  func gotoDetails(){
+  func gotoDetails(station: String){
     let child = DetailsCoordinator(navigator: self.navigationController)
     childCoordinators.append(child)
-    child.start()
+    child.start(station: station)
   }
   
 }
