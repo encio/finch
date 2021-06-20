@@ -16,7 +16,7 @@ final class DetailsViewController: BaseViewController {
   @IBOutlet weak var mapView: MKMapView!
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupStationLabel()
+    setupStationLabel(isLoading: true)
     setupMap()
     getCoordinate(search: "\(searchLocation) station, Ontario, Canada")
   }
@@ -26,8 +26,10 @@ final class DetailsViewController: BaseViewController {
     coordinator?.didFinish(coordinator: self.coordinator!)
   }
   
-  private func setupStationLabel(){
-    stationLabel.text = "Finch Station to \(searchLocation) Station"
+  private func setupStationLabel(isLoading: Bool){
+    if isLoading{stationLabel.text = "Calculating Route..."}
+    else{stationLabel.text = "Finch Station to \(searchLocation) Station"}
+    
   }
   private func getCoordinate(search: String){
     var coordinate: CLLocationCoordinate2D?
@@ -87,8 +89,8 @@ final class DetailsViewController: BaseViewController {
       
       //for getting just one route
       if let route = unwrappedResponse.routes.first {
+        setupStationLabel(isLoading: false)
         //show on map
-        
         self.mapView.addOverlay(route.polyline)
         //set the map area to show the route
         self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 80.0, left: 20.0, bottom: 100.0, right: 20.0), animated: true)
