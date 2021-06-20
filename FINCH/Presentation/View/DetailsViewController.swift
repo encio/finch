@@ -7,9 +7,11 @@
 
 import UIKit
 import MapKit
-final class DetailsViewController: UIViewController {
+final class DetailsViewController: BaseViewController {
   
+  @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var stationLabel: UILabel!
+  var coordinator: DetailsCoordinator?
   var searchLocation: String = ""
   @IBOutlet weak var mapView: MKMapView!
   override func viewDidLoad() {
@@ -17,8 +19,11 @@ final class DetailsViewController: UIViewController {
     setupStationLabel()
     setupMap()
     getCoordinate(search: "\(searchLocation) station, Ontario, Canada")
-    
-    
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    coordinator?.didFinish(coordinator: self.coordinator!)
   }
   
   private func setupStationLabel(){
@@ -45,15 +50,17 @@ final class DetailsViewController: UIViewController {
         return
       }
       
-//      let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
-//      mapView.setRegion(region, animated: true)
-//
+      //      let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 100, longitudinalMeters: 100)
+      //      mapView.setRegion(region, animated: true)
+      //
       showRouteOnMap(pickupCoordinate: finchCoordinate, destinationCoordinate: coordinate)
       
     }
   }
   
-  @IBAction func exit(_ sender: UIButton) {}
+  @IBAction func exit(_ sender: UIButton) {
+    self.dismiss(animated: true, completion: nil)
+  }
   private func setupMap(){
     mapView.delegate = self
     mapView.mapType = MKMapType.mutedStandard
@@ -73,20 +80,19 @@ final class DetailsViewController: UIViewController {
     request.transportType = .automobile
     
     let directions = MKDirections(request: request)
-    
+    backButton.isUserInteractionEnabled = false
     directions.calculate { [unowned self] response, error in
       guard let unwrappedResponse = response else { return }
+      backButton.isUserInteractionEnabled = true
       
       //for getting just one route
       if let route = unwrappedResponse.routes.first {
         //show on map
+        
         self.mapView.addOverlay(route.polyline)
         //set the map area to show the route
         self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 80.0, left: 20.0, bottom: 100.0, right: 20.0), animated: true)
       }
-      
-      //if you want to show multiple routes then you can get all routes in a loop in the following statement
-      //for route in unwrappedResponse.routes {}
     }
   }
   private let finchCoordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(43.7808), longitude: CLLocationDegrees(-79.4153))

@@ -12,7 +12,6 @@ final class TrainCoordinator: Coordinator {
   var childCoordinators = [Coordinator]()
   
   var navigationController: UINavigationController
-  
   init(navigation: UINavigationController){
     self.navigationController = navigation
   }
@@ -30,9 +29,12 @@ final class TrainCoordinator: Coordinator {
   
   func gotoDetails(station:  String){
     let child = DetailsCoordinator(navigator: navigationController)
+    child.parentCoordinator = self
     childCoordinators.append(child)
     child.start(station: station)
   }
+  
+ 
   
   
 }

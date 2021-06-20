@@ -29,6 +29,7 @@ final class BusCoordinator: Coordinator {
   
   func gotoDetails(station: String){
     let child = DetailsCoordinator(navigator: self.navigationController)
+    child.parentCoordinator = self
     childCoordinators.append(child)
     child.start(station: station)
   }
