@@ -20,7 +20,7 @@ protocol DisplayStationUseCaseDelegate: AnyObject{
 }
 
 
-class DisplayStationUseCase{
+final class DisplayStationUseCase{
   private let service: DumbGetterServiceProtocol
   weak var delegate: DisplayStationUseCaseDelegate?
   init(service: DumbGetterServiceProtocol){
